@@ -5,6 +5,7 @@
 	--background-lavender:#D8E4FF;
 	--font-dark:#050517;
 	--link-orange:#EC9A29;
+	--border-green:#7DC95E;
 }
 
 body {
@@ -21,7 +22,30 @@ body {
 	box-shadow: 10px 5px 5px var(--link-orange);
 }
 
+.skills-ul {
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	list-style:none;
+	padding:1rem;
+	grid-gap:.8rem;
+	text-align:center;
+}
 
+.skill-lists {
+	padding:.8rem;
+	border:2px dashed var(--border-green);
+}
+
+h2 {
+	padding:.8rem;
+}
+p {
+	padding:.8rem;
+	line-height:1.4;
+}
+form {
+	padding:1rem 0;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (max-width : 480px) {
@@ -33,6 +57,8 @@ and (max-width : 480px) {
 		grid-template-columns:1fr;
 		max-width:100%;
 		height:100vh;
+		text-align:center;
+		padding:1rem;
 	}
 	.nav {
 		display:flex;
@@ -48,12 +74,19 @@ and (max-width : 480px) {
 	.nav-lists {
 		padding:1rem 0;
 		text-align:center;
+		list-style:none;
 	}
 	.nav-lists a {
 		text-decoration:none;
 		border:1px solid var(--link-orange);
 		display:block;
 	}
+
+	.skills-ul {
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+	}
+	
 }	
 
  
