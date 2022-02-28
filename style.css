@@ -92,6 +92,7 @@ input[type=text] {
 .messages {
 	display:flex;
 	align-items:center;
+	justify-content:space-around;
 }
 
 .deleteBtn {
