@@ -13,24 +13,25 @@
 		<div class="container">
 			<nav class="nav">
 				<ul class="nav-ul">
-					<li class="nav-lists"><a href="#">About</a></li>
-					<li class="nav-lists"><a href="#">Experience</a></li>
-					<li class="nav-lists"><a href="#">Skills</a></li>
-					<li class="nav-lists"><a href="#">Projects</a></li>
-					<li class="nav-lists"><a href="#">Contact</a></li>
+					<li class="nav-lists"><a href="#about">About</a></li>
+					<li class="nav-lists"><a href="#experience">Experience</a></li>
+					<li class="nav-lists"><a href="#skills">Skills</a></li>
+					<li class="nav-lists"><a href="#projects">Projects</a></li>
+					<li class="nav-lists"><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 
 			<main class="main">
-				<section class="section about-section">
+				<section id="about" class="section about-section">
 					<h2>About</h2>
 					<p>Hello, my name is Patrick - A software engineer currently studying to become a FullStack Developer.</p>
 				</section>
 
-				<section class="section experience-section">
+				<section id="experience" class="section experience-section">
 					<h2>Experience</h2>
 				</section>
-				<section class="section skills-section">
+
+				<section id="skills" class="section skills-section">
 					<h2>Skills</h2>
 					<ul class="skills-ul">
 						<li class="skill-lists">HTML</li>
@@ -40,33 +41,37 @@
 						<li class="skill-lists">MongoDB</li>
 					</ul>
 				</section>
-				<section class="section projects-section">
-					
+
+				<section id="projects" class="section projects-section">	
 					<h2>Projects</h2>
 					<ul class="project-ul">
 					</ul>
 				</section>
 			</main>
 
-			<section class="form">
+			<section id="contact" class="form">
 				<h2>Contact Me</h2>
 				<form>
 					<label for="name">Name</label>
-				  	<input type="text" id="name" name="name">
+				  	<input type="text" id="name" name="name" required>
 					<br>
 
 					<label for="email">Email</label>
-						<input type="text" id="email" name="email">
+						<input type="text" id="email" name="email" required>
 					<br>
 					<label for="subject">Subject</label>
-						<textarea id="subject" name="subject"></textarea>
+						<textarea id="subject" name="subject" required></textarea>
 					<br>
 					<button type="submit" class="btn">Submit</button>
 				</form>
 			</section>
-		<section class="messages"></section>
+		<section id="messages">
+			<h2>Messages</h2>
+			<div class="messages">
+			</div>
+		</section>
 
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="footer-text">
 				&copy; Copyright <span id="currentDate"></span> PorcunaDev
 			</div>
