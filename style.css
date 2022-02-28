@@ -6,16 +6,15 @@
 	--font-dark:#050517;
 	--link-orange:#EC9A29;
 	--border-green:#7DC95E;
+	--project-color:#5E503F;
 }
 
 body {
 	background-color:var(--background-lavender);
 	color:var(--font-dark);
 }
- a {
-	color:var(--link-orange);
-	border:1px solid var(--link-orange);
-	padding:1rem;
+.container {
+	text-align:center;
 }
 .nav-lists a:hover {
 	color:var(--font-dark);
@@ -45,6 +44,49 @@ p {
 }
 form {
 	padding:1rem 0;
+}
+
+.project-ul {
+	display:grid;
+	grid-template-columns:repeat(5,1fr);
+	list-style:none;
+}
+.project-lists a {
+	text-decoration:none;
+	color:var(--project-color);
+	margin:.5rem 0;
+}
+
+.project-lists a:hover {
+	color:whitesmoke;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#subject {
+	width:100%;
+	padding:12px 20px;
+	margin:8px 0;
+	box-sizing:border-box;
+}
+
+.btn {
+	padding:.5rem;
+}
+.footer {
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.socials-img {
+	width:40px;
+	height:40px;
+	padding:0 .5rem;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
@@ -80,6 +122,8 @@ and (max-width : 480px) {
 		text-decoration:none;
 		border:1px solid var(--link-orange);
 		display:block;
+		padding:.8rem;
+		color:var(--link-orange)
 	}
 
 	.skills-ul {
@@ -88,9 +132,26 @@ and (max-width : 480px) {
 	}
 	
 }	
+ 
+.project-ul {
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	grid-gap:1rem;
+	list-style:none;
+}
 
- 
- 
+
+.footer {
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.socials-img {
+	width:25px;
+	height:25px;
+	padding:0 .2rem;
+}
+
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 481px) {
@@ -104,6 +165,7 @@ and (min-width : 481px) {
 		height:100vh;
 	}
 	.nav {
+		justify-content:center;
 		display:flex;
 		align-items:center;
 	}
@@ -115,6 +177,10 @@ and (min-width : 481px) {
 		padding:1rem;
 	}
 	.nav-lists a {
-		text-decoration:none;
+	text-decoration:none;
+	color:var(--link-orange);
+	border:1px solid var(--link-orange);
+	padding:1rem;
 	}
+	
 }
