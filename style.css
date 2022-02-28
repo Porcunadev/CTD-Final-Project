@@ -90,12 +90,13 @@ input[type=text] {
 }
 
 .messages {
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
+	display:grid;
+	align-content:center;
+	grid-template-columns:1fr;
 }
 
 .deleteBtn {
+	margin:1rem 0;
 	color:white;
 	background-color:red;
 	padding:.5rem;

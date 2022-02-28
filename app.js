@@ -49,23 +49,29 @@ function messages(e) {
 	}
 	let span = document.createElement("span");
 	let p = document.createElement("p");
+	let a = document.createElement("a");
 	
-	span.textContent = `From ${nameInput} |`;
+
+	span.textContent = `From ${nameInput} `;
 	p.textContent = `Message : ${subjectInput}`;
-	
+	a.href = emailInput;
+	a.textContent = `${nameInput}'s Email`;
+
+
 	deleteBtn.classList.add("deleteBtn");
 	deleteBtn.textContent = 'Delete';
 
 		
 	messages.appendChild(span);
 	messages.appendChild(p);
+	messages.appendChild(a);
 	messages.appendChild(deleteBtn)
 	
 	deleteBtn.addEventListener("click", () => {
-		console.log("hi")
 		messages.removeChild(span);
 		messages.removeChild(p);
 		messages.removeChild(deleteBtn);
+		messages.removeChild(a);
 	});
 }
 
