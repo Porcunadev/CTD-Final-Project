@@ -54,7 +54,7 @@ function messages(e) {
 
 	span.textContent = `From ${nameInput} `;
 	p.textContent = `Message : ${subjectInput}`;
-	a.href = emailInput;
+	a.href = `mailto:${emailInput}`;
 	a.textContent = `${nameInput}'s Email`;
 
 
