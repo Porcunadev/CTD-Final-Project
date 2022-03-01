@@ -31,9 +31,9 @@ let submitBtn = document.querySelector(".btn");
 function messages(e) {
 	e.preventDefault();
 	let messages = document.querySelector(".messages");
-	let nameInput = document.querySelector("#name").value;
-	let emailInput = document.querySelector("#email").value;
-	let subjectInput = document.querySelector("#subject").value;
+	let nameInput = document.querySelector("#name");
+	let emailInput = document.querySelector("#email");
+	let subjectInput = document.querySelector("#subject");
 	let deleteBtn = document.createElement("button");
 
 	if(nameInput === "") {
@@ -52,10 +52,10 @@ function messages(e) {
 	let a = document.createElement("a");
 	
 
-	span.textContent = `From ${nameInput} `;
-	p.textContent = `Message : ${subjectInput}`;
-	a.href = `mailto:${emailInput}`;
-	a.textContent = `${nameInput}'s Email`;
+	span.textContent = `From ${nameInput.value} `;
+	p.textContent = `Message : ${subjectInput.value}`;
+	a.href = `mailto:${emailInput.value}`;
+	a.textContent = `${nameInput.value}'s Email`;
 
 
 	deleteBtn.classList.add("deleteBtn");
@@ -67,11 +67,17 @@ function messages(e) {
 	messages.appendChild(a);
 	messages.appendChild(deleteBtn)
 	
+	nameInput.value = "";
+	emailInput.value = "";
+	subjectInput.value = "";
+
+
 	deleteBtn.addEventListener("click", () => {
 		messages.removeChild(span);
 		messages.removeChild(p);
 		messages.removeChild(deleteBtn);
 		messages.removeChild(a);
+
 	});
 }
 
