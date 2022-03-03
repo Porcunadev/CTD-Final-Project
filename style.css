@@ -46,6 +46,10 @@ form {
 	padding:1rem 0;
 }
 
+.about-section {
+	max-width:55ch;
+	margin:0 auto;
+}
 .project-ul {
 	display:grid;
 	grid-template-columns:repeat(5,1fr);
